@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/assets/logo.webp" type="image/png">
+    <title>V2Kart Clone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- FOR SLICK SLIDER -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Header start -->
+    <Header>
+        <!-- Navbar -->
+        <nav class="bg-white shadow px-4 py-3 fixed top-0 w-full z-50">
+            <div class="flex justify-between items-center max-w-[98%] mx-auto">
+                <!--Logo -->
+                <div class="flex items-center gap-4">
+                    <img src="./assets/logo.webp" alt="Logo" class="w-7" />
+
+
+                    <ul
+                        class="hidden md:flex md:justify-center md:items-center gap-4 uppercase text-sm font-medium text-gray-700">
+                        <li class="hover:text-red-500 hover:border-b-4 itemss cursor-pointer">
+                            Men
+                            <div class="mm-main grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 p-4"
+                                id="megaMenuContainer">
+
+                            </div>
+                        </li>
+                        <li class="hover:text-red-500 hover:border-b-4 itemss cursor-pointer">Women
+                            <!-- <div class="mm-main ">
+
+                            </div> -->
+                        </li>
+                        <li class="hover:text-red-500 hover:border-b-4 itemss cursor-pointer">Kids & Infants
+                            <!-- <div class="mm-main ">
+
+                            </div> -->
+                        </li>
+                        <li class="hover:text-red-500 cursor-pointer">Best Seller</li>
+                        <li class="hover:text-red-500 cursor-pointer">Discount Zone</li>
+                    </ul>
+                </div>
+
+                <!-- Icons -->
+                <div class="hidden md:flex items-center gap-6 text-gray-700 text-lg">
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                    <div class="flex items-center gap-1 cursor-pointer">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="text-sm font-normal">Login</span>
+                    </div>
+                    <i class="fa-solid fa-heart cursor-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer"></i>
+                </div>
+
+                <!-- mobile -->
+                <div class="md:hidden flex items-center text-2xl text-gray-700">
+                    <button id="menuBtn"><i class="fa-solid cursor-pointer fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
+            <div class="p-4 border-b flex justify-between items-center">
+                <img src="./assets/logo.webp" alt="Logo" class="w-7" />
+                <button id="closeBtn" class="text-xl text-gray-700"><i
+                        class="fa-solid cursor-pointer fa-xmark"></i></button>
+            </div>
+            <ul class="p-4 space-y-4 text-gray-800 text-sm uppercase font-medium">
+                <li class="hover:text-red-500 cursor-pointer">Men</li>
+                <li class="hover:text-red-500 cursor-pointer">Women</li>
+                <li class="hover:text-red-500 cursor-pointer">Kids & Infants</li>
+                <li class="hover:text-red-500 cursor-pointer">Best Seller</li>
+                <li class="hover:text-red-500 cursor-pointer">Discount Zone</li>
+                <li class="hover:text-red-500 cursor-pointer">Login</li>
+                <li class="hover:text-red-500 cursor-pointer">Wishlist</li>
+                <li class="hover:text-red-500 cursor-pointer">Cart</li>
+            </ul>
+        </div>
+
+    </Header>
+    <!-- Header end -->
+
+    <!-- Scrolling text bar -->
+    <div class="relative h-5 mt-14 overflow-hidden bg-black border-y border-gray-700">
+        <div class="absolute whitespace-nowrap scrolling-wrapper flex">
+            <span class="text-white font-normal  mr-[500px] text-[12px]">
+                Beware of fake offer and fraudulent callers
+            </span>
+            <span class="text-white font-normal  mr-[500px] text-[12px]">
+                GET 5% OFF ON ALL PREPAID ORDERS
+            </span>
+
+            <span class="text-white font-normal  mr-[500px] text-[12px]">
+                Beware of fake offer and fraudulent callers
+            </span>
+            <span class="text-white font-normal  mr-[500px] text-[12px]">
+                GET 5% OFF ON ALL PREPAID ORDERS
+            </span>
+        </div>
+    </div>
+
+    <!-- Slider banner start -->
+    <section class="slider-section mt-1 overflow-hidden">
+        <div class="your-slider">
+            <div>
+                <img class="cursor-pointer" src="/assets/imgi_7_WINTER-HOME-PAGE-BANNER.jpg" alt="Slide 1">
+            </div>
+            <div>
+                <img class="cursor-pointer" src="/assets/imgi_8_Mens-Fashion.jpg" alt="Slide 2">
+            </div>
+            <div>
+                <img class="cursor-pointer" src="/assets/imgi_9_Kids-HOME-PAGE-BANNER.jpg" alt="Slide 3">
+            </div>
+            <div>
+                <img class="cursor-pointer" src="/assets/imgi_10_Hottest-winter-collection.jpg" alt="Slide ">
+            </div>
+        </div>
+    </section>
+    <!-- slider banner end -->
+
+
+    <!-- TOP Pick listing -->
+    <section class="w-[90%] lg:w-[85%] mx-auto px-2 lg:px-6 py-10">
+        <p class="uppercase text-gray-400 tracking-widest text-sm mb-2">All Time Favourites</p>
+        <h2 class=" text-3xl lg:text-5xl font-bold text-gray-900 mb-3">Top Pick listing</h2>
+        <p class="text-gray-600 mb-6 w-full lg:max-w-2xl font-light text-xl">
+            We've sorted through our feed to put together a collection of our products perfect for a summer outdoors.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+                <img src="/assets/imgi_11_menPyjamas.jpg" alt="Card 1" class="rounded-lg cursor-pointer w-full" />
+            </div>
+            <div>
+                <img src="/assets/imgi_12_womensTops.jpg" alt="Card 2" class="rounded-lg cursor-pointer w-full" />
+            </div>
+            <div>
+                <img src="/assets/imgi_13_menTshirt.jpg" alt="Card 3" class="rounded-lg cursor-pointer w-full" />
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP Pick listing end -->
+
+    <!-- Offer Corner start -->
+    <section class="max-w-full flex flex-col items-center py-6 bg-white">
+        <h2 class=" text-xl lg:text-3xl font-bold text-gray-900 mb-6 uppercase font-normal">Offer Corner</h2>
+
+        <div class="flex  overflow-x-auto scrollbar-hide px-6 w-full justify-center">
+
+            <div class="flex-shrink-0 w-28 lg:w-64">
+                <img src="/assets/imgi_14_women1.gif" alt="Offer 1" class="rounded-lg cursor-pointer w-full" />
+            </div>
+
+            <div class="flex-shrink-0 w-28 lg:w-64">
+                <img src="/assets/imgi_15_discount1.gif" alt="Offer 2" class="rounded-lg cursor-pointer w-full" />
+            </div>
+
+            <div class="flex-shrink-0 w-28 lg:w-64">
+                <img src="/assets/imgi_16_men1.gif" alt="Offer 3" class="rounded-lg cursor-pointer w-full" />
+            </div>
+        </div>
+    </section>
+    <!-- Offer Corner start end -->
+
+    <!-- For her start -->
+    <section class=" max-w-[90%] lg:w-[85%] mx-auto py-10">
+        <h2 class="text-center w-full text-xl lg:text-3xl font-normal mb-8 border-b-2 border-red-200 inline-block">FOR
+            HER</h2>
+
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 sm:px-8">
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_17_yellow_girl.jpg" alt="Sandos"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_18_blue_shirt_girl.jpg" alt="Shirts"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_19_girls_top.jpg" alt="Tops" class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_20_peech_girl.jpg" alt="Dresses"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_21_slipper_girl.jpg" alt="Slippers"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_22_jegging_girl.jpg" alt="Jeggings"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_23_pyjama_girl.jpg" alt="Pyjamas"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_24_skirt_girl.jpg" alt="Skirts" class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_25_jeans_girl.jpg" alt="Jeans" class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_26_yellow_capri_girl.jpg" alt="Capris"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_27_women_shoes.jpg" alt="Women Shoes"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class=" w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]  overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_28_hotjeans_girl.jpg" alt="Hot Pants"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+
+            </div>
+            <!-- Item End -->
+        </div>
+    </section>
+    <!-- For her end -->
+
+    <!-- For him start -->
+    <section class="max-w-[90%] lg:w-[85%] mx-auto py-10">
+        <h2 class="text-center w-full text-xl lg:text-3xl font-normal mb-8 border-b-2 border-red-200 inline-block">FOR
+            HIM</h2>
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 sm:px-8">
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_29_jamaicans_men.jpg" alt="Jamaicans Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_30_boxer_men.jpg" alt="Boxer Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_31_slipper_men.jpg" alt="Slipper Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_32_formal_shirt_men.jpg" alt="Formal Shirt Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_33_T-shirt_men.jpg" alt="T-Shirt Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_34_kurta_men.jpg" alt="Kurta Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_35_casual_shirt.jpg" alt="Casual Shirt"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_36_shoes_men.jpg" alt="Shoes Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_37_pyjamas_men.jpg" alt="Pyjamas Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_38_sandaaa.jpg" alt="Sandals" class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_39_bermuda_men.jpg" alt="Bermuda Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_40_joggers_men.jpg" alt="Joggers Men"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- For him end -->
+
+    <!-- For kid start -->
+    <section class="max-w-[90%] lg:w-[85%] mx-auto py-10">
+        <h2 class="text-center w-full text-xl lg:text-3xl font-normal mb-8 border-b-2 border-red-200 inline-block">FOR
+            KID</h2>
+
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 sm:px-8">
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_41_kid_sets-cbaabb.jpg" alt="Kids Clothing Set - T-shirt and Shorts"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_42_kids_top.jpg" alt="Kids Casual Top - Yellow Printed"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_43_kids_frocks.jpg" alt="Kids Floral Frocks - Multicolor"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_44_kids_shirts.jpg" alt="Kids Shirts - Full Sleeve"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_45_kids_dressess.jpg" alt="Kids Party Dresses - Pink and Blue"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_46_kids_skirts.jpg" alt="Kids Skirts - Denim and Cotton Styles"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_47_kids_jackets.jpg" alt="Kids Winter Jackets - Hooded"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_48_kids_shorts.jpg" alt="Kids Summer Shorts - Cotton Blend"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_49_kid_t-shirt.jpg" alt="Kids Graphic T-shirt - Red"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_50_kids_jeans.jpg" alt="Kids Denim Jeans - Slim Fit"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_51_kids_trousers.jpg" alt="Kids Trousers - Stretchable Fabric"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <div
+                    class="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] overflow-hidden flex items-center justify-center">
+                    <img src="/assets/imgi_52_kids_dungarees.jpg" alt="Kids Dungarees - Stylish Blue Overalls"
+                        class="h-full cursor-pointer object-cover" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- For kid end -->
+
+    <!-- 1st Spotlight start -->
+    <section class="max-w-[100%] mx-auto py-10">
+        <h2 class="text-center w-full text-xl lg:text-3xl font-normal mb-4 border-b-2 border-red-200 inline-block">
+            V2KART SPOTLIGHT
+        </h2>
+
+        <div class="w-full flex justify-center items-center">
+            <img class="cursor-pointer" src="/assets/imgi_53_leggingsBanner.jpg" width="100%" alt="">
+        </div>
+    </section>
+    <!-- 1st Spotlight end -->
+
+    <!-- In the spotlight start -->
+    <section class="w-[100%] mx-auto py-10">
+        <h2 class="text-center w-full text-xl lg:text-3xl font-normal mb-4 border-b-2 border-red-200 inline-block">IN
+            THE
+            SPOTLIGHTS
+        </h2>
+
+        <div class="w-[100%] flex justify-center items-center">
+            <div class="w-[50%]">
+                <img class="cursor-pointer" src="/assets/imgi_54_fit-to-win.jpg" width="100%" alt="">
+            </div>
+            <div class="w-[50%]">
+                <img class="cursor-pointer" src="/assets/imgi_55_fashion_essentials.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="w-full flex justify-center items-center pt-3">
+            <img class="cursor-pointer" src="/assets/imgi_56_men_fashion.jpg" width="100%" alt="">
+        </div>
+        <div class="w-full flex justify-center items-center pt-3">
+            <img class="cursor-pointer" src="/assets/imgi_57_kids_planet.jpg" width="100%" alt="">
+        </div>
+        <div class="w-full flex justify-center items-center pt-3">
+            <img class="cursor-pointer" src="/assets/imgi_58_classic-classy.jpg" width="100%" alt="">
+        </div>
+    </section>
+    <!-- In the spotlight end -->
+
+    <!-- Footer start -->
+    <footer class="bg-gray-100 text-gray-800 pt-14 pb-5 px-4 md:px-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div>
+                <h2 class="font-bold mb-4">Company</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Help / Support & FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Dealership/Franchise Query</a></li>
+                    <li><a href="#" class="hover:underline">Corporate Website</a></li>
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Contact Us</a></li>
+                    <li><a href="#" class="hover:underline">Sitemap</a></li>
+                    <li><a href="#" class="hover:underline">B2B Buyer Login</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="font-bold mb-4">Policy & Term</h2>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:underline">Shipping Policy</a></li>
+                    <li><a href="#" class="hover:underline">Returns Policy</a></li>
+                    <li><a href="#" class="hover:underline">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:underline">Disclosure Policy</a></li>
+                    <li><a href="#" class="hover:underline">Cancellation Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="font-bold mb-4">Customer Care</h2>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt mr-2 mt-1 text-gray-600"></i> +91 9311421554
+                    </li>
+                    <li class="ml-6 text-xs text-gray-500">Helpline: Mon - Sat 08:00 AM to 05:00 PM</li>
+                    <li class="flex items-start">
+                        <i class="fas fa-comment-dots mr-2 mt-1 text-gray-600"></i> +91 9311421553
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mr-2 mt-1 text-gray-600"></i> Support@V2Kart.Com
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mr-2 mt-1 text-gray-600"></i>
+                        <div>
+                            V2 Retail Ltd<br />
+                            Khasra No - 928, Extended Lal Dora Abadi Village,<br />
+                            Kapashera Border, Tehsil Vasant Vihar, New Delhi-110037
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div>
+                <h2 class="font-bold mb-4">Follow Us</h2>
+                <div class="flex space-x-3 mb-6">
+                    <a href="#"><img src="/assets/imgi_59_facebook-new.png" class="w-6" alt="Facebook" /></a>
+                    <a href="#"><img src="/assets/imgi_60_twitter--v1.png" class="w-6" alt="Twitter" /></a>
+                    <a href="#"><img src="/assets/imgi_61_instagram-new.png" class="w-6" alt="Instagram" /></a>
+                    <a href="#"><img src="/assets/imgi_62_youtube-play.png" class="w-6" alt="YouTube" /></a>
+                </div>
+
+                <h2 class="font-semibold mb-2">SHOP FASTER WITH THE APP</h2>
+                <div class="flex justify-center items-center space-x-3">
+                    <a href="#"><img src="/assets/imgi_63_Download_on_the_App_Store.jpg" class="w-28 rounded"
+                            alt="App Store" /></a>
+                    <a href="#"><img src="/assets/imgi_64_google_play.jpg" class="w-28 rounded" alt="Google Play" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center text-xs text-gray-500 mt-10 border-t border-gray-300 pt-4">
+            © Copyright © 2022 - V2 Retail Ltd. All rights reserved
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
